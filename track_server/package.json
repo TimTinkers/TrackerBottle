@@ -1,0 +1,22 @@
+{
+  "name": "tracker_bottle_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "mongodb": "^2.2.25"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TimTinkers/TrackerBottle"
+  },
+  "author": "",
+  "license": "ISC"
+}

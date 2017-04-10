@@ -1,2 +1,3 @@
 track_server/data
+track_server/node_modules
 *.log
