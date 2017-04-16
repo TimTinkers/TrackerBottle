@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TrackerBottle</title>
+
+    <meta name="description" content="TrackerBottle">
+    <meta name="author" content="Derek Jobst">
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="page-header">
+        <h1>
+          TrackerBottle <small>Dashboard</small>
+        </h1>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            Daily Progress
+          </h3>
+        </div>
+        <div class="panel-body">
+          <p>Today you have consumed <strong><%= consumption  %> oz.</strong> of water, achieving <strong><%= consumption / goal * 100.0  %>%</strong> of your goal.</p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+              <span class="sr-only">60% Complete</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            Consumption Events
+          </h3>
+        </div>
+        <div class="panel-body">
+
+          <table class="table table-condensed">
+            <thead>
+              <tr>
+                <th>
+                  Weight
+                </th>
+                <th>
+                  Time
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for(var i = 0; i < events.length; i++) {%>
+                <tr>
+                  <td>
+                    <%= events[i].weight %>
+                  </td>
+                  <td>
+                    <%= events[i].time %>
+                  </td>
+                </tr>
+              <% } %>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/scripts.js"></script>
+  </body>
+</html>
